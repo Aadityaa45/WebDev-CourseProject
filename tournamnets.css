@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#navbar{
+    position: fixed;
+    height: 145px;
+    width: 100%;
+    /*background-color: red;*/
+    display: flex;
+    align-items: center; /*vertically alignment*/
+    padding: 0 150px;
+    gap: 50px;
+    justify-content: baseline; /*horizontally alignment*/
+    z-index: 99;
+}
+#navbar img{
+    height: 120px;
+    width: 150px;
+}
+#navbar h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#tennisball{
+    height: 30px;
+    width: 30px;
+    /*background-color: #95c11e;*/
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;  /*to ensure that the contain stays eithin the div*/
+    z-index: 99;
+}
+#tennisball img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 99;
+}
+#backblurtennis{
+    height: 500px;
+    width: 500px;
+    /*background-color: #95c11e;*/
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    filter: blur(90px);
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+#backblurtennis img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+video{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.iconholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 25.25%;
+    left: 20%;
+    height: 80px;
+    width: 70px;
+    background-color: rgba(128, 128, 128, 0.466);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#search{
+    position: relative;
+    z-index: 100;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 24px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 800px;
+    height: 80px;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.466);
+    border: none;
+    backdrop-filter: blur(20px);
+}
+#page1{
+    height: 100vh; /*view port height means taking height according to viewport*/
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#page1 h1{
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    top: -10%;
+    left: 0%;
+}
+#page1 h1::before{
+    content: "Search For The Tournamnets";
+    position: absolute;
+    color: black;
+    top: -2.5px;
+    left: -3px;
+    -webkit-text-stroke: 2px red;
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+}
+#providesscroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+  }
+  #providesscroller::-webkit-scrollbar {
+    display: none;
+  }
+  .scroller {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  #providesscroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 50px;
+    transition: all linear 0.3s;
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+  }
+  #providesscroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+    transform: scale(1.1);
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  #newtournamentshead{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+  }
+  #newtournamentshead:hover{
+    color: #95c11e;
+    transform: scale(1.1);
+  }
+  #upcomingtournaments{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 50px;
+    position: relative;
+    z-index: 10;
+    overflow-x: scroll;
+    scroll-behavior: none;
+  }
+  .container{
+    height: 80%;
+    width: 24%;
+    border-radius: 20px;
+    flex-shrink: 0;
+    background-size: cover;
+    transition: all ease 0.7s;
+  }
+  #con1{
+    background-image: url("https://www.tournaments360.in/imagescdn/postimg/open-tournament-532259.jpg");
+  }
+  #con2{
+    background-image: url("https://www.tournaments360.in/imagescdn/postimg/open-tournament-357256.jpg");
+  }
+  #con3{
+    background-image: url("https://www.tournaments360.in/imagescdn/postimg/open-tournament-357256.jpg");
+  }
+  #con4{
+    background-image: url("https://www.tournaments360.in/imagescdn/postimg/open-tournament-357256.jpg");
+  }
+  .aftereffect{
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding-top: 60px;
+    border-radius: 20px;
+    transition: all ease 0.7s;
+    opacity: 0;
+  }
+  .aftereffect h4{
+    margin-left: 20px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: black;
+  }
+  .aftereffect p{
+    margin-left: 20px;
+    font-weight: 300;
+    color: whitesmoke;
+  }
+
+  .container:hover .aftereffect{
+    opacity: 1;
+  }
+  .container:hover{
+    transform: scale(1.2);
+  }
+/* Container for the ongoing tournaments */
+#goingon {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to left bottom, #f34d3d, #5bbd2e);
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next row if needed */
+    justify-content: space-around; /* Space out the tournament divs evenly */
+    align-items: center;
+    flex-direction: column;
+    padding: 20px; /* Adds space inside the container */
+    gap: 20px; /* Gap between the tournament divs */
+    overflow-y: scroll;
+}
+
+/* Common tournament card styling for odd and even elements */
+.goingontournament {
+    height: 400px;
+    width: 300px;
+    border: 2px solid red;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Odd tournament styling */
+.goingontournamentodd {
+    background-color: #f9f9f9;
+}
+
+/* Even tournament styling */
+.goingontournamenteven {
+    background-color: #555;
+}
+
+/* Tournament name */
+.goingontournament h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Tournament description */
+.goingontournament p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #555; /* Slightly lighter color for text */
+}
+
+/* Team details */
+.goingontournament h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+#newssection{
+    /*display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;*/
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 7px;
+    width: 80%;
+    height: 600px;
+}
+.wordslidernews {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+  .wordslidernews::-webkit-scrollbar {
+    display: none;
+  }
+  .wordslidernews h2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: gilroy;
+    margin-right: 50px;
+    transition: all linear 0.3s;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .wordslidernews h2:hover{
+    color: #95c11e;
+    transform: scale(1.1);
+  }
+
+  .newselements{
+    height: 100px;
+    width: 500px;
+    overflow: y;
+    border-radius: 7px;
+    background-color: #5bbd2e;
+    backdrop-filter: blur(45px);
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    z-index: 10;
+  }
+
+  .newselements img{
+    height: 75%;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid red;
+    border-radius: 7px;
+  }
+  .newsmainhead{
+    position: relative;
+    top: -80px;
+    left: 111px;
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+  }
+  .newspara{
+    position: relative;
+    top: -75px;
+    left: 111px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 80%;
+  }
+  .newsreg{
+    position: relative;
+    top: -65px;
+    left: 111px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 80%;
+  }
+
+  .newselements:hover {
+    transform: scale(1.1);
+    /*animation: shake 1s;
+    animation-timing-function: ease-in-out;*/
+}
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - CricketBharat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="createaccount.css">
+</head>
+<body>
+    <div id="navbar">
+        <img src="orange.png" alt="a logo image">
+        <h4>Tournaments</h4>
+        <h4>Players</h4>
+        <h4>Connections</h4>
+        <h4>News</h4>
+        <h4>Profile</h4>
+    </div>
+    <div id="tennisball">
+        <img src="tennisball.png">
+    </div>
+    <div id="backblurtennis">
+        <img src="tennisball.png" alt="a ball">
+    </div>
+
+    <video autoplay loop muted src="mainvideo.mp4"></video>
+    
+    <div id="main">
+        <div id="create-account">
+            <h1>Create Account</h1>
+            <form id="create-account-form" action="/submit_form" method="POST">
+                
+                <!-- Username Field -->
+                <div class="form-group">
+                    <label for="username">Username (Required)</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]+$" title="Only alphanumeric characters allowed.">
+                </div>
+                
+                <!-- Location Field -->
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your city or village" required>
+                </div>
+                
+                <!-- Phone Number Field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number (Required)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="^\d{10}$" title="Please enter a 10-digit phone number.">
+                </div>
+                
+                <!-- Field of Interest -->
+                <div class="form-group">
+                    <label for="field">Field of Interest</label>
+                    <select id="field" name="field" required>
+                        <option value="">Select your field of interest</option>
+                        <option value="player">Player</option>
+                        <option value="coach">Coach</option>
+                        <option value="organizer">Tournament Organizer</option>
+                        <option value="fan">Fan</option>
+                    </select>
+                </div>
+
+                <!-- Short Bio -->
+                <div class="form-group">
+                    <label for="bio">Short Bio (Optional)</label>
+                    <textarea id="bio" name="bio" rows="4" maxlength="150" placeholder="Tell us a little about yourself (150 characters max)"></textarea>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password (Required)</label>
+                    <input type="password" id="password" name="password" placeholder="Set a strong password" required minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be 8-20 characters, include at least one lowercase letter, one uppercase letter, and one number.">
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password (Required)</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+    <script src="account.js"></script>
+</body>
+</html>

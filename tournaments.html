@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="tournamnets.css">
+</head>
+<body>
+    <div id="navbar">
+        <img src="orange.png" alt="a logo image">
+        <h4>Tournaments</h4>
+        <h4>Players</h4>
+        <h4>Connections</h4>
+        <h4>News</h4>
+        <h4>Profile</h4>
+    </div>
+    <div id="tennisball">
+        <img src="tennisball.png">
+    </div>
+    <div id="backblurtennis">
+        <img src="tennisball.png" alt="a ball">
+    </div>
+
+    <video autoplay loop muted src="tournamentsvideo.mp4"></video>
+    <div id="main">
+        <div id="page1">
+            <h1>Search For The Tournamnets</h1>
+        </div>
+        <form class="searchform">
+            <div class="iconholder">
+                <i class="fas fa-search"></i>
+            </div>
+            <input type="text" id="search" placeholder="Search stocks.." onkeyup="searchTournaments()">
+        </form>
+        <div id="page2">
+            <div id="providesscroller">
+                <div class="scroller">
+                    <h4>Tournaments</h4>
+                    <h4>National</h4>
+                    <h4>state</h4>
+                    <h4>district</h4>
+                    <h4>tehsil</h4>
+                    <h4>local</h4>
+                    <h4>entertainment</h4>
+                    <h4>prizes</h4>
+                </div>
+                <div class="scroller">
+                    <h4>Tournaments</h4>
+                    <h4>National</h4>
+                    <h4>state</h4>
+                    <h4>district</h4>
+                    <h4>tehsil</h4>
+                    <h4>local</h4>
+                    <h4>entertainment</h4>
+                    <h4>prizes</h4>
+                </div>
+            </div>
+            <h2 id="newtournamentshead">UPCOMING Tournamnets</h2>
+            <div id="upcomingtournaments">
+                <div class="container" id="con1">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+                <div class="container" id="con2">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+                <div class="container" id="con3">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+                <div class="container" id="con4">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+                <div class="container" id="con4">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+                <div class="container" id="con4">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+                <div class="container" id="con4">
+                    <div class="aftereffect">
+                        <h4>This is tournamne</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dignissimos harum officia excepturi blanditiis quae earum cupiditate doloribus alias obcaecati.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="newssection">
+                <div class="wordslidernews">
+                    <h2>ONGOING TOURNAMNETS</h2>
+                </div>
+                <div class="newselements" id="odd">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Sansad Trophy Cricket Tournament</h4>
+                    <p class="newspara">Total Teams:64</p>
+                    <p class="newsreg">Registered Teams:<span id="teamCount1"></span>24</p>
+
+                </div>
+                <div class="newselements" id="el1">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Young Boys Cricket Club jaora</h4>
+                    <p class="newspara">Total Teams:32</p>
+                    <p class="newsreg">Registered Teams:<span id="teamCount2"></span>30</p>
+                </div>
+                <div class="newselements" id="el2">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Golden Cricket Club Ujjain</h4>
+                    <p class="newspara">Total Teams:32</p>
+                    <p class="newsreg">Registered Teams:<span id="teamCount3"></span>20</p>
+                </div>
+                <div class="newselements" id="el3">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Golden Cricket Club Ujjain</h4>
+                    <p class="newspara">Total Teams:<span id="teamCount4"></span>32</p>
+                    <p class="newsreg">Registered Teams:20</p>
+                </div>
+                <div class="newselements" id="el4">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Golden Cricket Club Ujjain</h4>
+                    <p class="newspara">Total Teams:<span id="teamCount5"></span>32</p>
+                    <p class="newsreg">Registered Teams:20</p>
+                </div>
+                <div class="newselements" id="el5">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Golden Cricket Club Ujjain</h4>
+                    <p class="newspara">Total Teams:<span id="teamCount6"></span>32</p>
+                    <p class="newsreg">Registered Teams:20</p>
+                </div>
+                <div class="newselements" id="el5">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Golden Cricket Club Ujjain</h4>
+                    <p class="newspara">Total Teams:<span id="teamCount7"></span>32</p>
+                    <p class="newsreg">Registered Teams:20</p>
+                </div>
+                <div class="newselements" id="el6">
+                    <img src="https://www.dailyexcelsior.com/wp-content/uploads/2022/05/page14-1-4.jpg" alt="an image">
+                    <h4 class="newsmainhead">Golden Cricket Club Ujjain</h4>
+                    <p class="newspara">Total Teams:32</p>
+                    <p class="newsreg">Registered Teams:<span id="teamCount8"></span>20</p>
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="tournamnets.js"></script>
+</body>
+</html>

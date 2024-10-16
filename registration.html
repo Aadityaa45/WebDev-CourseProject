@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CricketBharat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        function register() {
+            // Get the current count from localStorage, or default to 0
+            let currentCount = localStorage.getItem('registeredTeams') || 0;
+            // Increment the count
+            currentCount++;
+            // Store the new count back in localStorage
+            localStorage.setItem('registeredTeams', currentCount);
+            // Redirect to tournaments.html
+            window.location.href = 'tournaments.html';
+        }
+    </script>
+</head>
+<style>
+        #navbar{
+    position: fixed;
+    height: 145px;
+    width: 100%;
+    /*background-color: red;*/
+    display: flex;
+    align-items: center; /*vertically alignment*/
+    padding: 0 150px;
+    gap: 50px;
+    justify-content: baseline; /*horizontally alignment*/
+    z-index: 99;
+}
+#navbar img{
+    height: 120px;
+    width: 150px;
+}
+#navbar h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#tennisball{
+    height: 30px;
+    width: 30px;
+    /*background-color: #95c11e;*/
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;  /*to ensure that the contain stays eithin the div*/
+    z-index: 99;
+}
+#tennisball img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 99;
+}
+#backblurtennis{
+    height: 500px;
+    width: 500px;
+    /*background-color: #95c11e;*/
+    position: fixed;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    filter: blur(90px);
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+#backblurtennis img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+video{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+        .container {
+            position: relative;
+            z-index: 10;
+            top: 100px;
+            width: 800px;
+            margin: 30px auto;
+            background: transparent;
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            overflow-y: scroll;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="file"] {
+            padding: 0;
+        }
+        button {
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</style>
+<body>
+    <div id="navbar">
+        <img src="orange.png" alt="a logo image">
+        <h4>Tournaments</h4>
+        <h4>Players</h4>
+        <h4>Connections</h4>
+        <h4>News</h4>
+        <h4>Profile</h4>
+    </div>
+    <div id="tennisball">
+        <img src="tennisball.png">
+    </div>
+    <div id="backblurtennis">
+        <img src="tennisball.png" alt="a ball">
+    </div>
+
+    <video autoplay loop muted src="tournamentsvideo.mp4"></video>
+
+    <div class="container">
+        <h2>Tennis Ball Cricket Tournament Registration</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label for="captain_name">Captain's Name:</label>
+            <input type="text" id="captain_name" name="captain_name" placeholder="Enter captain's name" required>
+
+            <label for="contact">Captain's Contact Number:</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter contact number" required>
+
+            <label for="address">Team's Address:</label>
+            <textarea id="address" name="address" placeholder="Enter team's address" rows="4" required></textarea>
+
+            <label for="transaction_screenshot">Upload Transaction Screenshot (Entry Fee):</label>
+            <input type="file" id="transaction_screenshot" name="transaction_screenshot" accept="image/*" required>
+
+            <label for="player_pdf">Upload PDF with Players' Aadhaar Cards:</label>
+            <input type="file" id="player_pdf" name="player_pdf" accept=".pdf" required>
+
+            <label for="match_date">Preferred Match Date:</label>
+            <input type="date" id="match_date" name="match_date" required>
+
+            <label for="other_info">Any Additional Information:</label>
+            <textarea id="other_info" name="other_info" placeholder="Enter any other essential details" rows="3"></textarea>
+
+            <button type="submit" onclick="handleRegistration()">Register Team</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+    <script>
+        var crsr = document.querySelector("#tennisball");
+var blurtennis = document.querySelector("#backblurtennis");
+document.addEventListener("mousemove", function (dets) {
+  crsr.style.left = dets.x + "px";
+  crsr.style.top = dets.y + "px";
+  blurtennis.style.left = dets.x - 250 + "px";
+  blurtennis.style.top = dets.y - 250 + "px";
+});
+    </script>
+</body>
+</html>
